@@ -1,0 +1,10 @@
+Package: blend
+Type: Package
+Title: Linear model-blending package
+Version: 1.0
+Date: 2013-03-12
+Author: Alex Ustian
+URL: http://
+Maintainer: Alex Ustian <alex.l.ustian@gmail.com>
+Description: Uses linear regression to combine multiple models into a new predictive model.
+License: GPL
