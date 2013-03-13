@@ -87,7 +87,7 @@ blend <- function(formula, data = NULL, train = NULL, probe = NULL, models = "lm
   finalBlend <- foldBlend[[minIndex[1]]][[minIndex[2]]]
   avgerror <- mean(error)
   sd <- sd(as.vector(error))
-  norm95CI <- c(avgerror - qnorm(.975)*sd / sqrt(rowdim), avgerror + qnorm(.975)*sd / sqrt(rowdim))
+  norm95CI <- c(avgerror - qnorm(.975)*sd / sqrt(nrow(error)*ncol(error)), avgerror + qnorm(.975)*sd / sqrt(nrow(error)*ncol(error)))
   quantiles <- quantile(as.vector(error))
   finalBlend$stats <- list(avgerror = avgerror, sd = sd, norm95CI = norm95CI, quantiles = quantiles)
   return(finalBlend)
